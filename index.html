@@ -28,15 +28,16 @@
             </div>
         </div>
     </header>
-    <section class="w-[80%] mx-auto border-gray-300 border-t-2 my-8 pt-8">
-        <div class="flex justify-between">
+    <section class="w-[80%] mx-auto border-gray-300 border-t-2 my-8 opacity-70">
+        
+    </section>
+    <main class="w-[80%] mx-auto ">
+        <div class="flex justify-between mb-8">
             <h2 class="text-[#002C5C] text-2xl font-semibold">Available Jobs</h2>
                         <p class="text-[#64748B] font-semibold"><span id="totalJobsCount">0</span> jobs</p>
         </div>
-    </section>
-    <main class="w-[80%] mx-auto ">
         <div>
-            <button onclick="toggleStyle('allFilterBtn')" class="bg-[#3B82F6] text-white rounded-[5px] px-8 py-1 cursor-pointer" id="allFilterBtn">All</button>
+            <button onclick="toggleStyle('allFilterBtn')" class="bg-[#3B82F6] text-white rounded-[5px] px-8 py-1 cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="allFilterBtn">All</button>
             <button onclick="toggleStyle('interviewFilterBtn')"  class="bg-white text-[#64748B] rounded-[5px] px-5 py-1 mx-1  cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="interviewFilterBtn">Interview</button>
             <button onclick="toggleStyle('rejectedFilterBtn')" class="bg-white text-[#64748B] rounded-[5px] px-5 py-1 cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="rejectedFilterBtn">Rejected</button>
         </div>
@@ -46,11 +47,11 @@
            
          </section>
 
-        <div id="nothing" class="w-[80%] mx-auto border p-10 bg-sky-50 rounded-lg border-none mt-9 mb-10 hidden">
+        <div id="nothing" class="p-10 bg-white rounded-[6px] mt-9 mb-10 hidden">
             <div class="text-center ">
                 <img class="mx-auto mt-10" src="./jobs.png" alt="">
-                <h3 class="text-xl font-medium mt-10 mb-3 ">No jobs available</h3>
-                <p class="mb-7">Check back soon for new job opportunities</p>
+                <h3 class="text-xl text-[#002C5C] font-semibold mt-6 mb-1 ">No jobs available</h3>
+                <p class="mb-7 text-[#64748B] text-[0.9rem]">Check back soon for new job opportunities</p>
             </div>
         </div>
 
