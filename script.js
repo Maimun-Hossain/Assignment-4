@@ -200,10 +200,11 @@ function renderInterview(){
     filteredSection.innerHTML = '';
 
          if(interviewList.length == 0){
-    document.getElementById('nothing').classList.remove('hidden');
- }
- else{    document.getElementById('nothing').classList.add('hidden');
- }
+            document.getElementById('nothing').classList.remove('hidden');
+        }
+        else{
+            document.getElementById('nothing').classList.add('hidden');
+        }
 
     for(let interview of interviewList){
         console.log(interview);
@@ -237,10 +238,11 @@ function renderRejected(){
     filteredSection.innerHTML = '';
 
              if(rejectedList.length == 0){
-    document.getElementById('nothing').classList.remove('hidden');
- }
- else{    document.getElementById('nothing').classList.add('hidden');
- }
+                document.getElementById('nothing').classList.remove('hidden');
+            }
+            else{
+                document.getElementById('nothing').classList.add('hidden');
+            }
 
     for(let reject of rejectedList){
         console.log(reject);
