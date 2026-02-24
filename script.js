@@ -30,13 +30,13 @@ function calculateCounts() {
     rejectedCount.innerText = rejectedList.length;
     
     // Update totalJobsCount based on current tab
-    if(currentStatus === 'allFilterBtn'){
+    if(currentStatus == 'allFilterBtn'){
         totalJobsCount.innerText = allCards.children.length;
     }
-    else if(currentStatus === 'interviewFilterBtn'){
+    else if(currentStatus == 'interviewFilterBtn'){
         totalJobsCount.innerText = interviewList.length;
     }
-    else if(currentStatus === 'rejectedFilterBtn'){
+    else if(currentStatus == 'rejectedFilterBtn'){
         totalJobsCount.innerText = rejectedList.length;
     }
     else{
@@ -64,19 +64,19 @@ function toggleStyle(id){
     document.getElementById(id).classList.remove('bg-white', 'text-[#64748B]');
     document.getElementById(id).classList.add('bg-[#3B82F6]', 'text-white');
 
-    if(id === 'interviewFilterBtn') {
+    if(id == 'interviewFilterBtn') {
         allCards.classList.add('hidden');
         filteredSection.classList.remove('hidden');
         totalJobsCount.innerText = interviewList.length;
         renderInterview();
     }
-    else if(id === 'allFilterBtn'){
+    else if(id == 'allFilterBtn'){
         allCards.classList.remove('hidden');
         filteredSection.classList.add('hidden');
         document.getElementById('nothing').classList.add('hidden');
         totalJobsCount.innerText = allCards.children.length;
     }
-    else if(id === 'rejectedFilterBtn'){
+    else if(id == 'rejectedFilterBtn'){
         allCards.classList.add('hidden');
         filteredSection.classList.remove('hidden');
         totalJobsCount.innerText = rejectedList.length;
@@ -97,7 +97,10 @@ mainContainer.addEventListener('click', function(event){
         const cardJobDescription = parentDiv.querySelector('.cardJobDescription').innerText;
 
         // console.log(cardJobTitle, cardJobRole, cardJobDetails, cardJobStatus, cardJobDescription);
-        parentDiv.querySelector('.cardJobStatus').innerText = 'Interview';
+        const statusBtn = parentDiv.querySelector('.cardJobStatus');
+        statusBtn.innerText = 'Interview';
+        statusBtn.classList.remove('bg-[#EEF4FF]', 'text-[#EF4444]', 'text-[#002C5C]', 'bg-[#FEE2E2]');
+        statusBtn.classList.add('bg-[#DCFCE7]', 'text-[#10B981]');
 
         const cardData = {
             cardJobTitle,
@@ -118,7 +121,7 @@ mainContainer.addEventListener('click', function(event){
         rejectedList = rejectedList.filter(item => item.cardJobTitle != cardData.cardJobTitle);
         // calculateCounts();
         
-        if(currentStatus === 'rejectedFilterBtn'){
+        if(currentStatus == 'rejectedFilterBtn'){
             renderRejected();
         }
         // console.log(interviewList);
@@ -138,7 +141,10 @@ mainContainer.addEventListener('click', function(event){
         const cardJobDescription = parentDiv.querySelector('.cardJobDescription').innerText;
 
         // console.log(cardJobTitle, cardJobRole, cardJobDetails, cardJobStatus, cardJobDescription);
-        parentDiv.querySelector('.cardJobStatus').innerText = 'Rejected';
+        const statusBtn = parentDiv.querySelector('.cardJobStatus');
+        statusBtn.innerText = 'Rejected';
+        statusBtn.classList.remove('bg-[#EEF4FF]', 'text-[#002C5C]', 'bg-[#DCFCE7]');
+        statusBtn.classList.add('bg-[#FEE2E2]', 'text-[#EF4444]');
 
         const cardData = {
             cardJobTitle,
@@ -150,7 +156,7 @@ mainContainer.addEventListener('click', function(event){
 
         // console.log(cardData);
 
-        const cardExist = rejectedList.find(item => item.cardJobTitle === cardData.cardJobTitle);
+        const cardExist = rejectedList.find(item => item.cardJobTitle == cardData.cardJobTitle);
 
 
         if(!cardExist){
@@ -158,7 +164,7 @@ mainContainer.addEventListener('click', function(event){
         }
         interviewList = interviewList.filter(item => item.cardJobTitle != cardData.cardJobTitle);
         
-        if(currentStatus === 'interviewFilterBtn'){
+        if(currentStatus == 'interviewFilterBtn'){
             renderInterview();
         }
         calculateCounts();
@@ -211,7 +217,7 @@ function renderInterview(){
                     </div>
                     <p class="cardJobDetails text-[#64748B] text-[0.9rem]">${interview.cardJobDetails}</p>
                     <div>
-                        <button class="cardJobStatus px-4 text-[#002C5C] font-semibold mb-2 py-2 bg-[#EEF4FF] uppercase">${interview.cardJobStatus}</button>
+                        <button class="cardJobStatus px-4 font-semibold mb-2 py-2 bg-[#DCFCE7] text-[#10B981] uppercase">${interview.cardJobStatus}</button>
                         <p class="cardJobDescription text-[#64748B] font-semibold">${interview.cardJobDescription}</p>
                     </div>
                     <div class="flex gap-2">
@@ -248,7 +254,7 @@ function renderRejected(){
                     </div>
                     <p class="cardJobDetails text-[#64748B] text-[0.9rem]">${reject.cardJobDetails}</p>
                     <div>
-                        <button class="cardJobStatus px-4 text-[#002C5C] font-semibold mb-2 py-2 bg-[#EEF4FF] uppercase">${reject.cardJobStatus}</button>
+                        <button class="cardJobStatus px-4 font-semibold mb-2 py-2 bg-[#FEE2E2] text-[#EF4444] uppercase">${reject.cardJobStatus}</button>
                         <p class="cardJobDescription text-[#64748B] font-semibold">${reject.cardJobDescription}</p>
                     </div>
                     <div class="flex gap-2">
