@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Application Tracker</title>
+    <!-- fabicon -->
+     <link rel="shortcut icon" href="./jobs.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <!-- Tailwind -->
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -13,7 +15,7 @@
 <body class="bg-[#F1F2F4] py-12">
     <header class="w-[80%] mx-auto">
         <h1 class="text-4xl font-bold text-[#002C5C]">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-4 mt-5">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5">
             <div class="bg-white rounded-[6px] p-4">
                 <p class="font-semibold">Total</p>
                 <h4 id="totalCount" class="text-2xl font-bold text-[#002C5C]">0</h4>
@@ -57,7 +59,7 @@
 
         <section id="allCards">
             <!-- card 1 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">Mobile First Corp</h3>
@@ -73,12 +75,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 2 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">WebFlow Agency</h3>
@@ -94,12 +96,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 3 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">DataViz Solutions</h3>
@@ -115,12 +117,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 4 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">CloudFirst Inc</h3>
@@ -136,12 +138,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 5 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">Innovation Labs</h3>
@@ -157,12 +159,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 6 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">MegaCorp Solutions</h3>
@@ -178,12 +180,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 7 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">StartupXYZ</h3>
@@ -199,12 +201,12 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>
             <!-- card 8 -->
-             <div class="flex justify-between my-4 p-5 bg-white rounded-[5px]">
+             <div class="sm:flex justify-between my-4 p-5 bg-white rounded-[5px]">
                 <div class="space-y-4">
                     <div>
                         <h3 class="cardJobTitle text-[#002C5C] font-bold text-[1.1rem]">TechCorp Industries</h3>
@@ -220,7 +222,7 @@
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
              </div>

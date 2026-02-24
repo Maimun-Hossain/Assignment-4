@@ -208,7 +208,7 @@ function renderInterview(){
     for(let interview of interviewList){
         console.log(interview);
         let div = document.createElement('div');
-        div.className = 'flex justify-between my-4 p-5 bg-white rounded-[5px]';
+        div.className = 'sm:flex justify-between my-4 p-5 bg-white rounded-[5px]';
         div.innerHTML = `
         <div class="space-y-4">
                     <div>
@@ -225,7 +225,7 @@ function renderInterview(){
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
         `
@@ -245,7 +245,7 @@ function renderRejected(){
     for(let reject of rejectedList){
         console.log(reject);
         let div = document.createElement('div');
-        div.className = 'flex justify-between my-4 p-5 bg-white rounded-[5px]';
+        div.className = 'sm:flex justify-between my-4 p-5 bg-white rounded-[5px]';
         div.innerHTML = `
         <div class="space-y-4">
                     <div>
@@ -262,7 +262,7 @@ function renderRejected(){
                         <button class="CardRejectedBtn bg-white border-2 border-[#EF4444] text-[#EF4444] rounded-[5px] px-5 py-1 cursor-pointer uppercase hover:bg-[#EF4444] hover:text-white">Rejected</button>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-5 sm:mt-0">
                     <button class="cardDeleteBtn border border-gray-300 rounded-full px-3 py-2 cursor-pointer hover:bg-red-200"><i class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
         `
