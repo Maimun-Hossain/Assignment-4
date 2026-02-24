@@ -16,7 +16,7 @@
         <div class="grid grid-cols-3 gap-4 mt-5">
             <div class="bg-white rounded-[6px] p-4">
                 <p class="font-semibold">Total</p>
-                <h4 id="totalCount" class="text-2xl font-bold text-[#002C5C]">8</h4>
+                <h4 id="totalCount" class="text-2xl font-bold text-[#002C5C]">0</h4>
             </div>
             <div class="bg-white rounded-[6px] p-4">
                 <p class="font-semibold">Interview</p>
@@ -36,9 +36,9 @@
     </section>
     <main class="w-[80%] mx-auto ">
         <div>
-            <button class="bg-[#3B82F6] text-white rounded-[5px] px-8 py-1 cursor-pointer" id="allFilterBtn">All</button>
-            <button  class="bg-white text-[#64748B] rounded-[5px] px-5 py-1 mx-1  cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="interviewFilterBtn">Interview</button>
-            <button class="bg-white text-[#64748B] rounded-[5px] px-5 py-1 cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="rejectedFilterBtn">Rejected</button>
+            <button onclick="toggleStyle('allFilterBtn')" class="bg-[#3B82F6] text-white rounded-[5px] px-8 py-1 cursor-pointer" id="allFilterBtn">All</button>
+            <button onclick="toggleStyle('interviewFilterBtn')"  class="bg-white text-[#64748B] rounded-[5px] px-5 py-1 mx-1  cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="interviewFilterBtn">Interview</button>
+            <button onclick="toggleStyle('rejectedFilterBtn')" class="bg-white text-[#64748B] rounded-[5px] px-5 py-1 cursor-pointer hover:bg-[#3B82F6] hover:text-white" id="rejectedFilterBtn">Rejected</button>
         </div>
 
         <section id="allCards">
